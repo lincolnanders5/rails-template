@@ -19,6 +19,13 @@ pg_ctl -D db/data/ init                       # Initialize database
 pg_ctl -D db/data/ -l log/pg.log start        # Start up database
 bin/rails db:create                           # Create database
 
+rails generate devise:install
+rails generate devise user
+
+rails generate migration add_name_to_users \
+  username:string \
+  given_name:string family_name:string
+
 pg_ctl -D db/data/ stop                       # Stop database
 ```
 
