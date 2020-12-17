@@ -75,6 +75,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-pwned_password (0.1.9)
+      devise (~> 4)
+      pwned (~> 2.0.0)
     erubi (1.10.0)
     faker (2.15.1)
       i18n (>= 1.6, < 2)
@@ -210,12 +213,12 @@ DEPENDENCIES
   brakeman (~> 4)
   byebug
   devise (~> 4.7)
+  devise-pwned_password (~> 0.1.4)
   faker (~> 2.15.1)
   jbuilder (~> 2.10)
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
-  pwned (~> 2.0)
   rails (~> 6.1)
   rubocop (~> 1.6)
   rubocop-performance

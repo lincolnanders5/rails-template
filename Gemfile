@@ -14,12 +14,12 @@ gem 'sassc', '~> 2.4'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1'
 gem 'devise', '~> 4.7'
-gem 'pwned', '~> 2.0'
+gem 'devise-pwned_password', '~> 0.1.4'
 
 gem 'jbuilder', '~> 2.10'
 
 gem 'sprockets', '~> 4.0'
-gem 'sprockets-rails', '~> 3.2', :require => 'sprockets/railtie'
+gem 'sprockets-rails', '~> 3.2', require: 'sprockets/railtie'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
