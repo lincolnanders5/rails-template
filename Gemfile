@@ -30,6 +30,9 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'scss_lint', '~> 0.50', require: false
+
+  gem 'better_errors', '~> 2.9.1', require: false
+  gem 'binding_of_caller', '~> 0.8.0', require: false
 end
 
 group :development do
