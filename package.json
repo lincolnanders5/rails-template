@@ -1,0 +1,13 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "sass": "^1.44.0"
+  },
+  "scripts": { 
+	"build:css": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "dev": "bin/dev",
+    "build": "npm run build:css",
+    "server" : "bin/rails server -b 0.0.0.0"
+  }
+}

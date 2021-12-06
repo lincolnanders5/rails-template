@@ -1,0 +1,6 @@
+@charset 'utf-8';
+@import 'foundation_and_overrides';
+
+$margin-container: 4rem;
+.header { margin-top:    $margin-container; }
+.footer { margin-bottom: $margin-container; }
