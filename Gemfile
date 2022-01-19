@@ -33,8 +33,13 @@ gem "redis", "~> 4.0"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
-# Reduces boot times through caching; required in config/boot.rb
-gem("bootsnap", ">= 1.4.4", require: false) if ENV.fetch("RAILS_ENV") { "development" } == "development"
+if ENV.fetch("RAILS_ENV") { "development" } == "development"
+  # Reduces boot times through caching; required in config/boot.rb
+  gem "bootsnap", ">= 1.4.4", require: false
+  
+  # Use LIVE_RELOAD=1 to enable automatic refresh in browser
+  gem "hotwire-livereload", "~> 1.0"
+end
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -63,9 +68,6 @@ group :test do
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
   gem "webdrivers", require: false
-  
-  # Use LIVE_RELOAD=1 to enable automatic refresh in browser
-  gem "hotwire-livereload", "~> 1.0"
 end
 
 # Use Sass to process CSS

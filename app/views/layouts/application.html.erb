@@ -12,6 +12,9 @@
     <% end %>
 	
 	<title><%= content_for?(:title) ? yield(:title) : "Lincoln Anders" %></title>
+    <% if Rails.env.development? %>
+      <%= javascript_include_tag "hotwire-livereload", defer: true %>
+    <% end %>
   </head>
 
   <body>
